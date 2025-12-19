@@ -33,7 +33,7 @@ const Navbar = () => {
                 top: 0,
                 left: 0,
                 right: 0,
-                padding: '1.5rem 2rem',
+                padding: '1rem 2rem',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
