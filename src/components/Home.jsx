@@ -151,5 +151,5 @@ const Home = () => {
         </section>
     );
 };
-
+// Updated social links
 export default Home;
