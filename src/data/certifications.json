@@ -1,0 +1,76 @@
+{
+  "Coursera Certifications": [
+    {
+      "name": "1) Supervised Machine Learning Regression and Classification",
+      "path": "/certifications/Coursera Certifications/1) Supervised Machine Learning Regression and Classification.pdf",
+      "type": "pdf",
+      "fileName": "1) Supervised Machine Learning Regression and Classification.pdf"
+    },
+    {
+      "name": "2) Advanced Learning Algorithms",
+      "path": "/certifications/Coursera Certifications/2) Advanced Learning Algorithms.pdf",
+      "type": "pdf",
+      "fileName": "2) Advanced Learning Algorithms.pdf"
+    },
+    {
+      "name": "3) Unsupervised Learning, Recommenders, Reinforcement Learning",
+      "path": "/certifications/Coursera Certifications/3) Unsupervised Learning, Recommenders, Reinforcement Learning.pdf",
+      "type": "pdf",
+      "fileName": "3) Unsupervised Learning, Recommenders, Reinforcement Learning.pdf"
+    },
+    {
+      "name": "4) Machine Learning",
+      "path": "/certifications/Coursera Certifications/4) Machine Learning.pdf",
+      "type": "pdf",
+      "fileName": "4) Machine Learning.pdf"
+    }
+  ],
+  "Internship": [
+    {
+      "name": "CUMI Internship - Completion Certificate",
+      "path": "/certifications/Internship/CUMI Internship - Completion Certificate.pdf",
+      "type": "pdf",
+      "fileName": "CUMI Internship - Completion Certificate.pdf"
+    }
+  ],
+  "Kaggle Certifications": [
+    {
+      "name": "Nithilan S - Data Visualization",
+      "path": "/certifications/Kaggle Certifications/Nithilan S - Data Visualization.png",
+      "type": "image",
+      "fileName": "Nithilan S - Data Visualization.png"
+    },
+    {
+      "name": "Nithilan S - Intro to Machine Learning",
+      "path": "/certifications/Kaggle Certifications/Nithilan S - Intro to Machine Learning.png",
+      "type": "image",
+      "fileName": "Nithilan S - Intro to Machine Learning.png"
+    },
+    {
+      "name": "Nithilan S - Pandas",
+      "path": "/certifications/Kaggle Certifications/Nithilan S - Pandas.png",
+      "type": "image",
+      "fileName": "Nithilan S - Pandas.png"
+    },
+    {
+      "name": "Nithilan S - Python",
+      "path": "/certifications/Kaggle Certifications/Nithilan S - Python.png",
+      "type": "image",
+      "fileName": "Nithilan S - Python.png"
+    }
+  ],
+  "Other Certifications": [
+    {
+      "name": "C,C++ Programming - FITA Academy",
+      "path": "/certifications/Other Certifications/C,C++ Programming - FITA Academy.pdf",
+      "type": "pdf",
+      "fileName": "C,C++ Programming - FITA Academy.pdf"
+    },
+    {
+      "name": "Ethical Hacking - 3122 24 5002 060_NITHILAN S",
+      "path": "/certifications/Other Certifications/Ethical Hacking - 3122 24 5002 060_NITHILAN S.pdf",
+      "type": "pdf",
+      "fileName": "Ethical Hacking - 3122 24 5002 060_NITHILAN S.pdf"
+    }
+  ]
+}
