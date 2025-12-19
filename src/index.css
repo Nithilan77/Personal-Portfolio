@@ -4,10 +4,12 @@
   --bg-secondary: #1a1a1a;
   --text-primary: #ffffff;
   --text-secondary: #a0a0a0;
-  --accent-primary: #00f3ff; /* Neon Cyan */
-  --accent-secondary: #7000ff; /* Neon Purple */
+  --accent-primary: #00f3ff;
+  /* Neon Cyan */
+  --accent-secondary: #7000ff;
+  /* Neon Purple */
   --accent-glow: rgba(0, 243, 255, 0.5);
-  
+
   /* Typography */
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'Fira Code', monospace;
@@ -103,4 +105,18 @@ body {
 ::selection {
   background: var(--accent-primary);
   color: var(--bg-primary);
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }

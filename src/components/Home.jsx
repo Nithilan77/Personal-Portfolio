@@ -11,12 +11,7 @@ const Home = () => {
             padding: 'var(--spacing-xl) 0'
         }}>
             <div className="container" style={{ width: '100%' }}>
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: 'var(--spacing-xl)',
-                    alignItems: 'center'
-                }}>
+                <div className="home-grid">
                     {/* Left Side - Hero Content */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
