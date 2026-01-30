@@ -3,27 +3,35 @@ import { motion } from 'framer-motion';
 const projects = [
     {
         id: 1,
+        title: "Hybrid RAG Based Multilingual Document Scanner and Explainer",
+        description: "A full-stack application that scans documents via the browser, uses AI to extract text, searches a legal knowledge base, and provides simplified explanations in local languages.",
+        tags: ["React", "Node.js", "FastAPI", "Gemini OCR API", "ChromaDB"],
+        link: "https://github.com/Nithilan77/Document-Scanner"
+    },
+
+    {
+        id: 2,
         title: "Voice-Activated AI VR World Tour",
         description: "An immersive web application that enables users to explore global landmarks through VR scenes, powered by AI-generated explanations and voice interaction.",
         tags: ["Node.js", "A-Frame (WebVR)", "Google Gemini API"],
         link: "https://github.com/Nithilan77/vr-world-tour"
     },
     {
-        id: 2,
+        id: 3,
         title: "Task Management & To-Do Application",
         description: "A desktop-based task management system designed for efficient task tracking with persistent storage and clean architectural design.",
         tags: ["Java", "JavaFX", "Hibernate", "Oracle Database"],
         link: "https://github.com/Nithilan77/Task_Management_And_To_Do_Application"
     },
     {
-        id: 3,
+        id: 4,
         title: "Student Result Management System",
         description: "A full-stack web application that automates student result processing, role-based access, and performance analytics for academic institutions.",
         tags: ["Python", "Flask", "SQLite", "Bootstrap"],
         link: "https://github.com/Nithilan77/Student-Result-Management"
     },
     {
-        id: 4,
+        id: 5,
         title: "Hotel Reservation Management System",
         description: "A web-based reservation system that manages bookings, cancellations, and waitlists with admin and user workflows.",
         tags: ["C", "CGI", "HTML", "File-Based Storage"],

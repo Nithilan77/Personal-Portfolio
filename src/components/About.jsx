@@ -21,7 +21,6 @@ const About = () => {
                         <div>
                             <p style={{ fontSize: '1.1rem', marginBottom: 'var(--spacing-md)', color: 'var(--text-secondary)' }}>
                                 I am a second-year IT student at <strong style={{ color: 'var(--text-primary)' }}>Sri Sivasubramaniya Nadar College of Engineering, Chennai</strong>.
-                                My interests are majorly aligned towards <strong style={{ color: 'var(--accent-primary)' }}>Artificial Intelligence and Machine Learning</strong> and related technologies.
                             </p>
 
                             <div style={{ marginTop: 'var(--spacing-lg)' }}>
