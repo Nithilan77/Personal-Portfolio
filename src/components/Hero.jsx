@@ -1,54 +1,83 @@
-import { motion } from 'framer-motion';
+import { useState } from "react";
 
-const Hero = () => {
+const specs = [
+  ["Focus", "AI · Systems"],
+  ["Rank", "13 / 141"],
+  ["CGPA", "8.511"],
+  ["Seeking", "2027 Summer Internship"],
+];
+
+function Portrait() {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    // No portrait.jpg found — drop one into public/img/portrait.jpg to replace this.
     return (
-        <section className="section hero" style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            textAlign: 'center',
-            background: 'radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-primary) 100%)'
-        }}>
-            <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <h2 style={{
-                        color: 'var(--accent-primary)',
-                        fontFamily: 'var(--font-mono)',
-                        marginBottom: 'var(--spacing-md)'
-                    }}>
-                        Hello, I'm
-                    </h2>
-                    <h1 style={{
-                        fontSize: 'clamp(3rem, 8vw, 6rem)',
-                        fontWeight: '800',
-                        lineHeight: '1.1',
-                        marginBottom: 'var(--spacing-md)'
-                    }}>
-                        <span className="gradient-text">Nithilan S</span>
-                    </h1>
-                    <h3 style={{
-                        fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
-                        color: 'var(--text-secondary)',
-                        marginBottom: 'var(--spacing-lg)'
-                    }}>
-                        AI & ML Enthusiast
-                    </h3>
-
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5, duration: 0.8 }}
-                    >
-                        <a href="#projects" className="btn">View My Work</a>
-                    </motion.div>
-                </motion.div>
-            </div>
-        </section>
+      <div className="flex aspect-4/5 w-full items-center justify-center border border-dashed border-line bg-surface">
+        <span className="display text-6xl text-line select-none">NS</span>
+      </div>
     );
-};
+  }
 
-export default Hero;
+  return (
+    <img
+      src="/img/portrait.jpg"
+      alt="Nithilan S"
+      onError={() => setFailed(true)}
+      className="aspect-4/5 w-full border border-line object-cover grayscale-[35%]"
+    />
+  );
+}
+
+export default function Hero() {
+  return (
+    <section id="top" className="px-6 pt-28 pb-12 lg:px-10 lg:pt-24 lg:pb-0">
+      <div className="mx-auto grid max-w-6xl items-end gap-8 sm:grid-cols-[1fr_minmax(9rem,20rem)] sm:gap-10 lg:gap-16">
+        <div>
+          <p className="eyebrow">Software engineer · Chennai, India</p>
+
+          <h1 className="display mt-6 text-[clamp(2.6rem,7vw,5.2rem)]">
+            Nithilan S
+          </h1>
+
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
+            I am interested in LLM and retrieval systems, and the distributed
+            infrastructure that keeps them standing up — and I measure whether
+            they actually work.
+          </p>
+
+          <dl className="mt-8 grid max-w-xl grid-cols-2 gap-x-8 gap-y-4 border-t border-line pt-6 sm:grid-cols-4">
+            {specs.map(([k, v]) => (
+              <div key={k}>
+                <dt className="eyebrow">{k}</dt>
+                <dd className="mt-1.5 font-mono text-[0.82rem] text-text">{v}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href="#work"
+              className="border border-accent bg-accent px-5 py-2.5 font-mono text-[0.78rem] tracking-wide text-bg transition-opacity hover:opacity-85"
+            >
+              Projects
+            </a>
+            <a
+              href="/Nithilan-S-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-line px-5 py-2.5 font-mono text-[0.78rem] tracking-wide text-text transition-colors hover:border-accent hover:text-accent"
+            >
+              Resume ↗
+            </a>
+          </div>
+        </div>
+
+        <div className="max-w-[16rem] sm:max-w-none">
+          <Portrait />
+          <p className="eyebrow mt-3">B.Tech IT · SSN College of Engineering</p>
+        </div>
+      </div>
+    </section>
+  );
+}

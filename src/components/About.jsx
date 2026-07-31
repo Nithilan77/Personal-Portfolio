@@ -1,67 +1,77 @@
-import { motion } from 'framer-motion';
+import { education } from "../data/projects";
+import Certifications from "./Certifications";
 
-const About = () => {
-    return (
-        <section id="about" className="section" style={{ background: 'var(--bg-secondary)' }}>
-            <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                >
-                    <h2 style={{
-                        fontSize: '2.5rem',
-                        marginBottom: 'var(--spacing-lg)',
-                        color: 'var(--accent-secondary)'
-                    }}>
-                        About Me
-                    </h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--spacing-xl)', alignItems: 'center' }}>
-                        <div>
-                            <p style={{ fontSize: '1.1rem', marginBottom: 'var(--spacing-md)', color: 'var(--text-secondary)' }}>
-                                I am a second-year IT student at <strong style={{ color: 'var(--text-primary)' }}>Sri Sivasubramaniya Nadar College of Engineering, Chennai</strong>.
-                            </p>
+export default function About() {
+  return (
+    <section id="about" className="px-6 py-12 lg:px-10 lg:py-4">
+      <div className="mx-auto max-w-6xl">
+        <div className="border-b border-line pb-5">
+          <h2 className="display text-3xl md:text-4xl">About</h2>
+        </div>
 
-                            <div style={{ marginTop: 'var(--spacing-lg)' }}>
-                                <h3 style={{ color: 'var(--accent-secondary)', marginBottom: 'var(--spacing-sm)', fontSize: '1.2rem' }}>Education</h3>
-                                <ul style={{ listStyle: 'none', color: 'var(--text-secondary)' }}>
-                                    <li style={{ marginBottom: 'var(--spacing-md)', paddingLeft: '1rem', borderLeft: '2px solid var(--accent-primary)' }}>
-                                        <strong style={{ color: 'var(--text-primary)' }}>B.Tech Information Technology</strong>
-                                        <div style={{ fontSize: '0.9rem' }}>Sri Sivasubramaniya Nadar College of Engineering</div>
-                                        <div style={{ fontSize: '0.8rem', opacity: 0.7 }}>Present</div>
-                                    </li>
-                                    <li style={{ paddingLeft: '1rem', borderLeft: '2px solid var(--accent-secondary)' }}>
-                                        <strong style={{ color: 'var(--text-primary)' }}>Higher Secondary (11th & 12th)</strong>
-                                        <div style={{ fontSize: '0.9rem' }}>Maharishi Vidya Mandir Senior Secondary School, Chetpet</div>
-                                        <div style={{ fontSize: '0.8rem', opacity: 0.7 }}>Completed</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div style={{
-                            width: '100%',
-                            height: '300px',
-                            background: 'linear-gradient(45deg, var(--accent-primary), var(--accent-secondary))',
-                            borderRadius: '20px',
-                            opacity: 0.8
-                        }}>
-                            <img
-                                src="/1000018047.jpg"
-                                alt="Profile"
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                    borderRadius: '20px'
-                                }}
-                            />
-                        </div>
-                    </div>
-                </motion.div>
+        <div className="mt-5 grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+          <div className="space-y-5 text-[1.05rem] leading-relaxed text-muted">
+            <p>
+              I&rsquo;m an Information Technology undergraduate at SSN College of
+              Engineering in Chennai, currently a research intern at NIT
+              Tiruchirappalli working on LLM reasoning and retrieval-augmented
+              question answering. Most of my work sits where applied AI meets
+              backend engineering — retrieval pipelines, model evaluation, and
+              the distributed infrastructure that has to hold them up in
+              production.
+            </p>
+            <p>
+              What I care about is the part after the demo works. A pipeline that
+              answers correctly once tells you very little; an evaluation harness
+              you can re-run after every change tells you whether the last thing
+              you did helped. That&rsquo;s the habit I&rsquo;ve tried to build
+              into every project here — a fixed question set, a metric, and a
+              record of what the numbers said even when they disagreed with me.
+            </p>
+            <p>
+              I&rsquo;m looking for a Summer 2027 software engineering
+              internship, ideally on applied AI, retrieval, or the backend
+              infrastructure that machine learning systems run on.
+            </p>
+          </div>
+
+          <div>
+            <p className="eyebrow">Education</p>
+            <div className="mt-6 space-y-8">
+              {education.map((e) => (
+                <div key={e.school} className="border-l border-line pl-5">
+                  <p className="font-mono text-[0.72rem] text-faint">
+                    {e.period}
+                  </p>
+                  <h3 className="mt-2 text-[0.98rem] text-text">{e.school}</h3>
+                  <p className="mt-1 text-[0.88rem] text-muted">{e.detail}</p>
+                  <div className="mt-3 flex gap-6">
+                    {e.stats.map(([k, v]) => (
+                      <div key={k}>
+                        <span className="eyebrow">{k}</span>
+                        <p className="mt-0.5 font-mono text-[0.82rem] text-accent">
+                          {v}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
-        </section>
-    );
-};
 
-export default About;
+            <div className="mt-10">
+              <p className="eyebrow">Activities</p>
+              <p className="mt-4 text-[0.92rem] leading-relaxed text-muted">
+                Core member of the Open Source Software Club at SSN Coding Club.
+                Co-organised FunOverflow, a three-round college-wide event, in
+                September 2025.
+              </p>
+            </div>
+
+            <Certifications />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
