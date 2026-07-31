@@ -67,7 +67,7 @@ export default function Nav() {
           className="font-mono text-sm tracking-tight text-text"
           aria-label="Back to top"
         >
-          Nithilan&nbsp;S<span className="text-accent">.</span>
+          Nithilan S<span className="text-accent">.</span>
         </a>
 
         <div className="flex items-center gap-1">
