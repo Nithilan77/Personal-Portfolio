@@ -46,8 +46,7 @@ export default function Contact() {
           <div>
             <p className="max-w-md text-[1.05rem] leading-relaxed text-muted">
               I&rsquo;m looking for a Summer 2027 software engineering
-              internship. If you&rsquo;re hiring, or you just want to argue about
-              retrieval evaluation, the form works and so does email.
+              internship.
             </p>
 
             <dl className="mt-10 space-y-5">
