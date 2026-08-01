@@ -33,16 +33,28 @@ function Portrait() {
 
 export default function Hero() {
   return (
-    <section id="top" className="px-6 pt-28 pb-12 lg:px-10 lg:pt-24 lg:pb-0">
-      <div className="mx-auto grid max-w-6xl items-end gap-8 sm:grid-cols-[1fr_minmax(9rem,20rem)] sm:gap-10 lg:gap-16">
-        <div>
+    <section id="top" className="px-6 pt-28 pb-12 lg:px-10 lg:pt-32 lg:pb-16">
+      <div className="mx-auto grid max-w-6xl grid-cols-[7rem_1fr] items-end gap-x-5 gap-y-6 sm:grid-cols-[1fr_minmax(9rem,18rem)] sm:gap-x-10 sm:gap-y-0 lg:gap-x-16">
+        {/* portrait: beside the name on phones, its own column from sm up */}
+        <div className="col-start-1 row-start-1 self-center sm:col-start-2 sm:row-span-2 sm:row-start-1 sm:self-end">
+          <Portrait />
+          <p className="eyebrow mt-3 hidden sm:block">
+            B.Tech IT · SSN College of Engineering
+          </p>
+        </div>
+
+        {/* name block */}
+        <div className="col-start-2 row-start-1 self-center sm:col-start-1 sm:self-end">
           <p className="eyebrow">Software engineer · Chennai, India</p>
 
-          <h1 className="display mt-6 text-[clamp(2.6rem,7vw,5.2rem)]">
+          <h1 className="display mt-2 text-[clamp(2rem,9vw,5.2rem)] sm:mt-6">
             Nithilan S
           </h1>
+        </div>
 
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
+        {/* everything below spans the full width on phones */}
+        <div className="col-span-2 row-start-2 sm:col-span-1 sm:col-start-1 sm:row-start-2">
+          <p className="mt-0 max-w-xl text-lg leading-relaxed text-muted sm:mt-5 md:text-xl">
             I am interested in LLM and retrieval systems, and the distributed
             infrastructure that keeps them standing up — and I measure whether
             they actually work.
@@ -73,11 +85,6 @@ export default function Hero() {
               Resume ↗
             </a>
           </div>
-        </div>
-
-        <div className="order-first w-28 sm:order-none sm:w-auto sm:max-w-none">
-          <Portrait />
-          <p className="eyebrow mt-3 hidden sm:block">B.Tech IT · SSN College of Engineering</p>
         </div>
       </div>
     </section>
