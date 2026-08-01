@@ -13,8 +13,10 @@ function Portrait() {
   if (failed) {
     // No portrait.jpg found — drop one into public/img/portrait.jpg to replace this.
     return (
-      <div className="flex aspect-4/5 w-full items-center justify-center border border-dashed border-line bg-surface">
-        <span className="display text-6xl text-line select-none">NS</span>
+      <div className="flex aspect-square w-full items-center justify-center rounded-full border border-dashed border-line bg-surface sm:aspect-4/5 sm:rounded-none">
+        <span className="display text-4xl text-line select-none sm:text-6xl">
+          NS
+        </span>
       </div>
     );
   }
@@ -24,7 +26,7 @@ function Portrait() {
       src="/img/portrait.jpg"
       alt="Nithilan S"
       onError={() => setFailed(true)}
-      className="aspect-4/5 w-full border border-line object-cover grayscale-[35%]"
+      className="aspect-square w-full rounded-full border border-line object-cover object-top grayscale-[35%] sm:aspect-4/5 sm:rounded-none sm:object-center"
     />
   );
 }
@@ -73,9 +75,9 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="max-w-[16rem] sm:max-w-none">
+        <div className="order-first w-28 sm:order-none sm:w-auto sm:max-w-none">
           <Portrait />
-          <p className="eyebrow mt-3">B.Tech IT · SSN College of Engineering</p>
+          <p className="eyebrow mt-3 hidden sm:block">B.Tech IT · SSN College of Engineering</p>
         </div>
       </div>
     </section>
