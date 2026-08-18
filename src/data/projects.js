@@ -99,7 +99,7 @@ export const experience = [
     ],
   },
   {
-    role: "Software Engineering Intern",
+    role: "Machine Learning Intern",
     org: "QPay India Pvt Ltd",
     place: "Chennai, India",
     period: "May 2026 — Jun 2026",
